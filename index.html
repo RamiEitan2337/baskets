@@ -161,6 +161,20 @@
                     description: "<h4>Classic cheese-board style snacking.</h4> Includes: Aged cheddar cheese, Artisan crackers, Homemade jam, Pure honey, Spiced nuts, Dried fruit, Cornichons or olives, Mini cheese spreader"
                 }
             ]
+        },
+        {
+            title: "Customize Your Own",
+            baskets: [
+                {
+                    id: "custom",
+                    name: "Customize Your Own Basket",
+                    image: "./images/custom.png",
+                    alt: "Customize your own gift basket",
+                    isCustom: true,
+                    description:
+                        "Mix and match to create the perfect gourmet basket for your occasion, taste, and budget. Choose from our full list of gourmet options and request a custom quote."
+                }
+            ]
         }
     ];
 
@@ -189,20 +203,37 @@
                 article.className = "basket-card";
 
                 article.innerHTML = `
-                    <img src="${basket.image}" alt="${basket.alt}" />
-                    <div class="basket-content">
-                        <h3>${basket.name} ($${basket.amount})</h3>
-                        <p>${basket.description}</p>
-                        <a
-                            class="venmo-icon-button"
-                            href="https://venmo.com/u/${venmoUsername}?txn=pay&amount=${basket.amount}&note=${encodeURIComponent(basket.name)}"
-                            target="_blank"
-                            aria-label="Pay for ${basket.name} with Venmo"
-                            title="Pay with Venmo">
-                            <img src="./images/venmo-icon.svg" alt="Venmo Icon" />
-                        </a>
-                    </div>
-                `;
+    <img src="${basket.image}" alt="${basket.alt}" />
+    <div class="basket-content">
+        <h3>
+            ${basket.name}${basket.amount ? ` ($${basket.amount})` : ""}
+        </h3>
+
+        ${
+                    basket.isCustom
+                        ? `
+            <p>${basket.description}</p>
+
+            <a
+                class="custom-quote-button"
+                href="./custom.html"
+            >
+                View options and request a quote
+            </a>
+        `
+                        : `
+            <p>${basket.description}</p>
+            <a
+                class="venmo-icon-button"
+                href="https://venmo.com/u/${venmoUsername}?txn=pay&amount=${basket.amount}&note=${encodeURIComponent(basket.name)}"
+                target="_blank"
+                aria-label="Pay for ${basket.name} with Venmo"
+                title="Pay with Venmo">
+                <img src="./images/venmo-icon.svg" alt="Venmo Icon" />
+            </a>
+        `}
+    </div>
+`;
 
                 cardsWrapper.appendChild(article);
             });

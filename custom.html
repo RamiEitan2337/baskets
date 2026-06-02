@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Customize Your Own Basket | Yaels Gourmet Baskets</title>
+
+  <meta
+          name="description"
+          content="Build your own custom gourmet gift basket and request a quote."
+  />
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+<header>
+  <h1>Yaels Gourmet Baskets</h1>
+  <p>
+    Thoughtfully Curated Boutique Gift Basket for Every Occasion
+  </p>
+</header>
+
+<main>
+  <section class="intro">
+    <p>
+      Looking for something personalized? Build a custom gourmet basket for corporate gifts, holidays, birthdays,
+      host gifts, celebrations, or any special occasion.
+      Browse our available options below, then send us a quote request, and we’ll help
+      create something beautiful for your taste and budget.
+    </p>
+
+    <p>
+      <a href="./index.html">← Back to all baskets</a>
+    </p>
+  </section>
+
+  <section class="custom-options-section">
+    <h2>Available Options</h2>
+
+    <div class="custom-options-grid">
+      <div class="custom-option-group">
+        <h3>Wine</h3>
+        <ul>
+          <li>White wine</li>
+          <li>Red wine</li>
+          <li>Boutique wine</li>
+          <li>Kosher wine</li>
+        </ul>
+      </div>
+
+      <div class="custom-option-group">
+        <h3>Cheese & Dairy</h3>
+        <ul>
+          <li>Boutique cheeses</li>
+          <li>Soft cheese</li>
+          <li>Aged cheese</li>
+          <li>Goat cheese</li>
+          <li>Homemade herb butter</li>
+        </ul>
+      </div>
+
+      <div class="custom-option-group">
+        <h3>Spreads & Pairings</h3>
+        <ul>
+          <li>Onion jam</li>
+          <li>Fruit preserves</li>
+          <li>Honey</li>
+          <li>Olive spread</li>
+          <li>Tapenade</li>
+        </ul>
+      </div>
+
+      <div class="custom-option-group">
+        <h3>Snacks & Sweets</h3>
+        <ul>
+          <li>Artisanal crackers</li>
+          <li>Chocolate</li>
+          <li>Cookies</li>
+          <li>Nuts</li>
+          <li>Dried fruit</li>
+        </ul>
+      </div>
+
+      <div class="custom-option-group">
+        <h3>Fresh & Seasonal</h3>
+        <ul>
+          <li>Fresh fruit</li>
+          <li>Seasonal treats</li>
+          <li>Holiday-themed items</li>
+          <li>Fresh herbs</li>
+          <li>Decorative flowers</li>
+        </ul>
+      </div>
+
+      <div class="custom-option-group">
+        <h3>Personal Touches</h3>
+        <ul>
+          <li>Custom note card</li>
+          <li>Ribbon color selection</li>
+          <li>Corporate branding</li>
+          <li>Birthday theme</li>
+          <li>Holiday theme</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section">
+    <h2>Request a Custom Quote</h2>
+
+    <form action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="6dd8930f-5927-4fa5-ac35-23f0f7e613a0" />
+      <input type="hidden" name="subject" value="Custom basket quote request" />
+
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required />
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required />
+      </div>
+
+      <div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
+      </div>
+
+      <div>
+        <label for="occasion">Occasion</label>
+        <input type="text" id="occasion" name="occasion" placeholder="Birthday, holiday, corporate gift, etc." />
+      </div>
+
+      <div>
+        <label for="budget">Approximate Budget</label>
+        <input type="text" id="budget" name="budget" placeholder="$100, $150, $200, etc." />
+      </div>
+
+      <div>
+        <label for="options">Items You’re Interested In</label>
+        <textarea
+                id="options"
+                name="options"
+                rows="6"
+                placeholder="Tell us which items you’d like included, any preferences, allergies, delivery details, or special requests."
+                required
+        ></textarea>
+      </div>
+
+      <button type="submit">Request Quote</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <a
+          class="whatsapp-link"
+          href="https://wa.me/16466418040?text=Hi%2C%20I%20am%20interested%20in%20creating%20a%20custom%20gift%20basket."
+          target="_blank"
+  >
+    Send us a message on WhatsApp
+  </a>
+</footer>
+
+</body>
+</html>
