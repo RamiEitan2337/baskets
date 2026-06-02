@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yaels Gourmet Baskets</title>
+
+    <meta
+            name="description"
+            content="Gourmet boutique baskets, perfect for holidays and events."
+    />
+
+    <!-- Open Graph / WhatsApp preview -->
+    <meta property="og:title" content="Yaels Gourmet Baskets" />
+    <meta
+            property="og:description"
+            content="Gourmet boutique baskets, perfect for holidays and events."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ramieitan2337.github.io/baskets/" />
+    <meta property="og:site_name" content="Yaels Gourmet Baskets" />
+    <meta property="og:image" content="https://ramieitan2337.github.io/baskets/images/preview.jpg" />
+    <meta property="og:image:alt" content="Gourmet boutique basket preview" />
+
+    <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+<header>
+    <h1>Yaels Gourmet Baskets</h1>
+    <p>
+        Thoughtfully Curated Boutique Gift Basket for Every Occasion
+    </p>
+</header>
+
+<main>
+    <section class="intro">
+        <p>
+            Welcome to Yaels Gourmet Baskets, where every gift is designed to delight.
+            We create elegant, handcrafted gift baskets filled with premium treats, artisanal favorites, and beautifully arranged surprises for birthdays, holidays, corporate gifts, celebrations, and everyday moments of appreciation.
+            Whether you’re sending warmth, congratulations, or a simple thank-you, our gourmet baskets make every gesture feel personal, memorable, and truly special.
+        </p>
+    </section>
+
+
+    <section class="baskets" id="basketCards"></section>
+
+    <section class="contact-section">
+        <h2>For Orders</h2>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="6dd8930f-5927-4fa5-ac35-23f0f7e613a0" />
+
+            <input type="hidden" name="subject" value="Shavuot basket order" />
+            <div>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email" required />
+            </div>
+
+            <div>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number" />
+            </div>
+
+            <div>
+                <label for="address">Delivery Address</label>
+                <input type="text" id="address" name="address" placeholder="Your delivery address" />
+            </div>
+
+            <div>
+                <label for="basket">Gift Basket</label>
+                <select id="basket" name="basket" required>
+                    <option value="">Select a basket</option>
+                </select>
+            </div>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="form-venmo">
+            <a
+                    id="venmoButton"
+                    class="bottom-venmo-button"
+                    href="https://venmo.com/u/Yael-Ido?txn=pay&note=Shavuot%20Basket"
+                    target="_blank"
+            >
+                Pay with Venmo
+            </a>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <a class="whatsapp-link" href="https://wa.me/16466418040?text=Hi%2C%20I%20am%20interested%20in%20ordering%20a%20holiday%20gift%20basket." target="_blank">
+        Send us a message on WhatsApp
+    </a>
+</footer>
+
+<script>
+    const venmoUsername = "Yael-Ido";
+
+    const basketSections = [
+        {
+            title: "Wine and Cheese",
+            baskets: [
+                {
+                    id: "classic",
+                    name: "Classic Wine and Cheese Basket",
+                    amount: 89,
+                    image: "./images/basic.png",
+                    alt: "Classic Wine and Cheese Basket",
+                    description:
+                        "The basket includes a chilled bottle of white wine, three fine boutique cheeses, homemade herb butter, and rich onion jam.\n" +
+                        "The perfect basket for an intimate holiday meal, a spring picnic, or a festive host gift, with a precise pairing of refreshing wine and carefully selected cheeses."
+                },
+                {
+                    id: "vinyard",
+                    name: "The Vineyard Basket",
+                    amount: 139,
+                    image: "./images/large.png",
+                    alt: "The Vineyard Basket",
+                    description:
+                        "The basket includes a refreshing bottle of white wine, a deep red wine, four fine boutique cheeses, homemade herb butter, and rich onion jam.\n" +
+                        "Enjoy the best of all worlds with a celebration of flavors combining light white wine and rich red wine, alongside a selection of complementary cheeses that will elevate your holiday table."
+                },
+                {
+                    id: "somm",
+                    name: "Sommelier’s Edit",
+                    amount: 179,
+                    image: "./images/somm.png",
+                    alt: "Sommelier’s Edit",
+                    description:
+                        "The basket includes a bottle of white wine, a bottle of red wine, a premium aged red wine, five fine boutique cheeses, homemade herb butter, and rich onion jam.\n" +
+                        "The ultimate Shavuot experience for true wine and gourmet lovers, in an especially rich and impressive basket that brings together the highest-quality ingredients for unforgettable hosting."
+                }
+            ]
+        },
+        {
+            title: "Summer Celebration",
+            baskets: [
+                {
+                    id: "bbq",
+                    name: "BBQ Celebration Basket",
+                    amount: 113,
+                    image: "./images/bbq.png",
+                    alt: "BBQ Celebration Basket",
+                    description: "<h4>Smoky, savory and grill-ready.</h4>Includes: Homemade BBQ sauce, Homemade dry rub, BBQ popcorn, Smoked nuts, Pickles or pickled onions, Basting brush, Printed BBQ recipe card, Red, white and blue gift packaging"
+                },
+                {
+                    id: "summer-large",
+                    name: "Summer Picnic Basket",
+                    amount: 103,
+                    image: "./images/picnic.png",
+                    alt: "Summer Picnic Basket",
+                    description: "<h4>Classic cheese-board style snacking.</h4> Includes: Aged cheddar cheese, Artisan crackers, Homemade jam, Pure honey, Spiced nuts, Dried fruit, Cornichons or olives, Mini cheese spreader"
+                }
+            ]
+        }
+    ];
+
+    const baskets = basketSections.flatMap(function (section) {
+        return section.baskets;
+    });
+
+    const basketCards = document.getElementById("basketCards");
+    const basketSelect = document.getElementById("basket");
+    const venmoButton = document.getElementById("venmoButton");
+
+    function createBasketCards() {
+        basketSections.forEach(function (section) {
+            const sectionElement = document.createElement("section");
+            sectionElement.className = "basket-section";
+
+            const heading = document.createElement("h2");
+            heading.className = "basket-section-title";
+            heading.textContent = section.title;
+
+            const cardsWrapper = document.createElement("div");
+            cardsWrapper.className = "basket-section-cards";
+
+            section.baskets.forEach(function (basket) {
+                const article = document.createElement("article");
+                article.className = "basket-card";
+
+                article.innerHTML = `
+                    <img src="${basket.image}" alt="${basket.alt}" />
+                    <div class="basket-content">
+                        <h3>${basket.name} ($${basket.amount})</h3>
+                        <p>${basket.description}</p>
+                        <a
+                            class="venmo-icon-button"
+                            href="https://venmo.com/u/${venmoUsername}?txn=pay&amount=${basket.amount}&note=${encodeURIComponent(basket.name)}"
+                            target="_blank"
+                            aria-label="Pay for ${basket.name} with Venmo"
+                            title="Pay with Venmo">
+                            <img src="./images/venmo-icon.svg" alt="Venmo Icon" />
+                        </a>
+                    </div>
+                `;
+
+                cardsWrapper.appendChild(article);
+            });
+
+            sectionElement.appendChild(heading);
+            sectionElement.appendChild(cardsWrapper);
+            basketCards.appendChild(sectionElement);
+        });
+    }
+
+    function populateBasketDropdown() {
+        basketSections.forEach(function (section) {
+            const group = document.createElement("optgroup");
+            group.label = section.title;
+
+            section.baskets.forEach(function (basket) {
+                const option = document.createElement("option");
+                option.value = basket.id;
+                option.textContent = `${basket.name} - $${basket.amount}`;
+                group.appendChild(option);
+            });
+
+            basketSelect.appendChild(group);
+        });
+    }
+
+    function updateVenmoButton() {
+        const selectedBasketId = basketSelect.value;
+
+        const selectedBasket = baskets.find(function (basket) {
+            return basket.id === selectedBasketId;
+        });
+
+        if (!selectedBasket) {
+            venmoButton.href = `https://venmo.com/u/${venmoUsername}?txn=pay&note=Holiday%20Gift%20Basket`;
+            venmoButton.textContent = "Pay with Venmo";
+            return;
+        }
+
+        const note = encodeURIComponent(selectedBasket.name);
+
+        venmoButton.href = `https://venmo.com/u/${venmoUsername}?txn=pay&amount=${selectedBasket.amount}&note=${note}`;
+        venmoButton.textContent = `Pay $${selectedBasket.amount} with Venmo`;
+    }
+
+    createBasketCards();
+    populateBasketDropdown();
+    basketSelect.addEventListener("change", updateVenmoButton);
+</script>
+
+</body>
+</html>
+```
