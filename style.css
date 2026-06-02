@@ -247,8 +247,9 @@ select {
 }
 
 .custom-quote-button {
-    display: inline-block;
-    margin-top: 14px;
+    display: block;
+    width: fit-content;
+    margin: 14px auto 0;
     padding: 10px 16px;
     border-radius: 999px;
     text-decoration: none;
